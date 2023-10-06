@@ -38,7 +38,7 @@ Todos os bancos são independentes (não possuem network configurada), bastando 
 ### MongoDB:
 - Porta: 27017
 - Usuário e senha: A Autenticação foi desabilitada (pode executar tudo direto)
-- Obs: Existem vários softwares diferentes para se conectar no MongoDB. Eu indico o [NoSQL Booster](https://nosqlbooster.com/downloads), tem versão grátis e você vai conseguir fazer o que quiser durante os estudos.
+- Obs: Inicie com o comando "cqlsh". Existem vários softwares diferentes para se conectar no MongoDB. Eu indico o [NoSQL Booster](https://nosqlbooster.com/downloads), tem versão grátis e você vai conseguir fazer o que quiser durante os estudos.
 
 ### Cassandra:
 - Porta: 9042
