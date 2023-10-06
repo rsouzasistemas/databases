@@ -38,12 +38,12 @@ Todos os bancos são independentes (não possuem network configurada), bastando 
 ### MongoDB:
 - Porta: 27017
 - Usuário e senha: A Autenticação foi desabilitada (pode executar tudo direto)
-- Obs: Inicie com o comando "cqlsh". Existem vários softwares diferentes para se conectar no MongoDB. Eu indico o [NoSQL Booster](https://nosqlbooster.com/downloads), tem versão grátis e você vai conseguir fazer o que quiser durante os estudos.
+- Obs: Existem vários softwares diferentes para se conectar no MongoDB. Eu indico o [NoSQL Booster](https://nosqlbooster.com/downloads), tem versão grátis e você vai conseguir fazer o que quiser durante os estudos.
 
 ### Cassandra:
 - Porta: 9042
 - Usuário e senha: A Autenticação foi desabilitada (pode executar tudo direto)
-- Obs: Você precisa acessar o CLI do container para usar. Ainda não encontrei um software tipo DBeaver para poder conectar no Cassandra e manipulá-lo, apesar de você poder usá-lo com Spark e NiFi (não inclusos!)
+- Obs: Você precisa acessar o CLI do container para usar. Inicie com o comando "cqlsh". Ainda não encontrei um software tipo DBeaver para poder conectar no Cassandra e manipulá-lo, apesar de você poder usá-lo com Spark e NiFi (não inclusos!)
 
 
 ## Considerações:
