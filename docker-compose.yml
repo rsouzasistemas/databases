@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  # PostgreSQL
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db:/var/lib/postgresql/data
+
+  # MySQL
+  mysql:
+    image: 'mysql/mysql-server:8.0'
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '1234'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: 'estudo_uninove'
+      MYSQL_USER: 'aluno'
+      MYSQL_PASSWORD: '1234'
+    volumes:
+      - './mysql:/var/lib/mysql'
+
+  # Redis
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning
+    volumes:
+      - ./redis:/data
+
+  # MongoDB
+  mongodb:
+    image: mongo:6-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./dbdata6:/data/db
+
+  # Cassandra
+  cassandra:
+    image: cassandra:4.0
+    ports:
+      - 9042:9042
+    volumes:
+      - ./cassandra:/var/lib/cassandra
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cloudinfra
+
+volumes:
+  dbdata6:
+  redis:
+    driver: local
